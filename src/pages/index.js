@@ -1,11 +1,14 @@
 import React from "react"
 import { navigate } from "gatsby"
 
+import InstagramEmbed from "react-instagram-embed"
+
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-
 import Arrow from "-!svg-react-loader!../images/chevron-right.svg"
-import logo from "../images/logo.png"
+import Logo from "-!svg-react-loader!../images/svg/jumbo.svg"
+import Check from "-!svg-react-loader!../images/check.svg"
+import main from "../images/main.png"
 
 function LandingPage() {
   return (
@@ -27,15 +30,75 @@ function LandingPage() {
               </h3>
 
               <div id="services-list">
-                <div>Residential and commercial</div>
-                <div>Local, friendly and professionsal</div>
-                <div>Serving Jackson, Targhee and the greater Teton valley</div>
+                <div>
+                  <Check /> Residential and commercial
+                </div>
+                <div>
+                  <Check /> Local, friendly and professionsal
+                </div>
+                <div>
+                  <Check /> Serving Jackson, Targhee and the greater Teton
+                  valley
+                </div>
               </div>
-              <button class="primary-button">Get a quote today</button>
+              <button className="myButton">Get a quote today</button>
             </div>
 
-            <img id="jumbo-logo" src={logo} />
+            <Logo id="jumbo-logo" />
           </div>
+        </div>
+
+        <div id="main-image-container">
+          <img src={main} />
+
+          <div>
+            "Banh mi twee man braid biodiesel man bun. Ethical fanny pack wolf
+            seitan. Cronut jean shorts literally, thundercats sustainable
+            heirloom actually lumbersexual lomo wayfarers."
+            <br />
+            <small> - Max Lasky (second home owner in Jackson)</small>
+          </div>
+        </div>
+
+        <div id="insta-embed-container">
+          <InstagramEmbed
+            url="https://www.instagram.com/p/CDKbhELJOjx/"
+            maxWidth={320}
+            hideCaption={false}
+            containerTagName="div"
+            protocol=""
+            injectScript
+            onLoading={() => {}}
+            onSuccess={() => {}}
+            onAfterRender={() => {}}
+            onFailure={() => {}}
+          />
+          <InstagramEmbed
+            url="https://www.instagram.com/p/CGqCd_1pNhR/"
+            maxWidth={320}
+            hideCaption={false}
+            containerTagName="div"
+            protocol=""
+            injectScript
+            onLoading={() => {}}
+            onSuccess={() => {}}
+            onAfterRender={() => {}}
+            onFailure={() => {}}
+          />
+
+          <InstagramEmbed
+            url="https://www.instagram.com/p/CFa4dslp-Me/"
+            clientAccessToken="162870972371128|4e9354d06e6cf968ad370692564b05a7"
+            maxWidth={320}
+            hideCaption={false}
+            containerTagName="div"
+            protocol=""
+            injectScript
+            onLoading={() => {}}
+            onSuccess={() => {}}
+            onAfterRender={() => {}}
+            onFailure={() => {}}
+          />
         </div>
       </div>
     </Layout>

@@ -209,13 +209,150 @@
   border-radius: 20px;
 }
 
+/* normal button style */
+.myButton {
+  // width: 110px;
+  padding: 12px 24px;
+  border: 1px solid #1b262c;
+  // height: 30px;
+  background-color: white;
+  text-align: center;
+  color: #272343;
+  position: relative;
+  border-radius: 20px;
+  // background-color: white;
+}
+/* button hover style if required */
+.myButton:hover {
+}
+/* generated element for shine effect.
+* normal state is semi-transparent
+* white but with zero width. Set no
+* transition here for no mouse-leave
+* animations. Otherwise the effect
+* will play in reverse when your mouse
+* leaves the element
+*/
+.myButton:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: var(--navy-blue);
+  opacity: 0.2;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  border-radius: 20px;
+}
+/* on hover we animate the width to
+* 100% and opacity to 0 so the element
+* grows and fades out
+*/
+.myButton:hover:after {
+  width: 120%;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+#main-image-container {
+  width: 100%;
+  margin: 48px 0;
+
+  display: flex;
+  justify-content: center;
+  div {
+    max-width: 350px;
+    margin-left: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: OpenSans-Light;
+    font-size: 24px;
+    color: #272343;
+    letter-spacing: -0.02px;
+    font-family: OpenSans-Light;
+    font-size: 24px;
+    color: #272343;
+    letter-spacing: -0.04px;
+
+    small {
+      font-family: OpenSans-LightItalic;
+      font-size: 14px;
+      color: #272343;
+      letter-spacing: -0.04px;
+      font-family: OpenSans-LightItalic;
+      font-size: 14px;
+      color: #272343;
+      letter-spacing: -0.04px;
+    }
+  }
+
+  img {
+    max-width: 500px;
+  }
+}
+
 #LandingPageContainer {
   display: flex;
   justify-content: space-around;
-  /* padding: 0 48px 0 0; */
   flex-wrap: wrap;
-  // max-width: 1200px;
   margin: auto;
+
+  #insta-embed-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 24px 0;
+    flex-wrap: wrap;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .LandingPage {
@@ -232,6 +369,11 @@
     justify-content: center;
     align-items: center;
     padding: 48px 0;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
   }
 
   #jumbo-logo {
