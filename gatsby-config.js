@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/allstarwindow",
   siteMetadata: {
     siteUrl: `https://www.allstarwindowcleaning.com`,
     title: ``,
@@ -33,4 +34,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-};
+}
