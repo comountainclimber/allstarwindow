@@ -197,12 +197,24 @@
   }
 }
 
+.primary-button {
+  background-color: white;
+  padding: 12px 24px;
+
+  border: 1px solid #1b262c;
+  font-family: OpenSans-SemiBold;
+  font-size: 17px;
+  color: #272343;
+  letter-spacing: -0.04px;
+  border-radius: 20px;
+}
+
 #LandingPageContainer {
   display: flex;
   justify-content: space-around;
   /* padding: 0 48px 0 0; */
   flex-wrap: wrap;
-  max-width: 1200px;
+  // max-width: 1200px;
   margin: auto;
 }
 
@@ -210,18 +222,67 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  height: 75vh;
-  min-height: 600px;
-  flex: 0.5;
+  // height: 75vh;
+  // min-height: 600px;
 
-  .jumbo-bosch {
-    margin: 12px 0;
-    padding: 12px 0;
-    background: rgba(0, 0, 0, 0) url("../images/jumbo.png") no-repeat scroll
-      center center / cover;
-    width: 500px;
-    box-shadow: 0 0 10px 10px var(--dark-grey) inset;
+  #call-to-action-container {
+    background-color: var(--light-grey);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0;
   }
+
+  #jumbo-logo {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 24px;
+  }
+
+  #call-to-action {
+    text-align: center;
+    width: 530px;
+    margin-right: 24px;
+
+    span {
+      font-family: OpenSans-LightItalic;
+      font-size: 22px;
+      color: #272343;
+    }
+
+    button {
+      margin-top: 12px;
+    }
+
+    h3 {
+      font-family: OpenSans-SemiBold;
+      font-size: 26px;
+      color: #272343;
+      letter-spacing: -0.04px;
+    }
+
+    #services-list {
+      font-family: OpenSans-Regular;
+      font-size: 22px;
+      color: #272343;
+      letter-spacing: -0.04px;
+      text-align: left;
+
+      div {
+        margin: 12px 0;
+      }
+    }
+  }
+
+  // .jumbo-bosch {
+  //   margin: 12px 0;
+  //   padding: 12px 0;
+  //   background: rgba(0, 0, 0, 0) url("../images/jumbo.png") no-repeat scroll
+  //     center center / cover;
+  //   width: 500px;
+  //   box-shadow: 0 0 10px 10px var(--dark-grey) inset;
+  // }
 }
 
 #created-by-has {
