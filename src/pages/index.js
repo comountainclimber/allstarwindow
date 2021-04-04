@@ -63,6 +63,7 @@ function LandingPage() {
         <div id="insta-embed-container">
           <InstagramEmbed
             url="https://www.instagram.com/p/CDKbhELJOjx/"
+            clientAccessToken="162870972371128|4e9354d06e6cf968ad370692564b05a7"
             maxWidth={320}
             hideCaption={false}
             containerTagName="div"
@@ -75,6 +76,7 @@ function LandingPage() {
           />
           <InstagramEmbed
             url="https://www.instagram.com/p/CGqCd_1pNhR/"
+            clientAccessToken="162870972371128|4e9354d06e6cf968ad370692564b05a7"
             maxWidth={320}
             hideCaption={false}
             containerTagName="div"
