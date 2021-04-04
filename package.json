@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Maxwell Lasky <mlasky46@gmail.com>",
   "dependencies": {
+    "@fontsource/open-sans": "^4.2.2",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-manifest": "^2.2.31",

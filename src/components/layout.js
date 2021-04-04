@@ -1,11 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
+import React from "react"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import "@fontsource/open-sans"
+import "@fontsource/open-sans/300.css"
+import "@fontsource/open-sans/400.css"
+import "@fontsource/open-sans/700.css"
+import "@fontsource/open-sans/800.css"
 
-import Footer from "./Footer";
-import Navigation from "./Navigation";
-import "./layout.scss";
-import "../index.css";
+import Footer from "./Footer"
+import Navigation from "./Navigation"
+import "./layout.scss"
+import "../index.css"
 
 const Layout = ({ children }) => (
   <>
@@ -26,10 +31,10 @@ const Layout = ({ children }) => (
     </div>
     <Footer />
   </>
-);
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
-export default Layout;
+export default Layout

@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
-import instagram from "../images/ig.svg";
-import facebook from "../images/fb.svg";
+import instagram from "../images/ig.svg"
+import facebook from "../images/fb.svg"
 
 export default () => {
   return (
@@ -17,24 +17,16 @@ export default () => {
           </a>
 
           <div id="footer-social-icons">
-            <a
-              href="https://www.facebook.com/boschguitar"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <img alt="facebook-icon" src={facebook} />
             </a>
 
-            <a
-              href="https://www.youtube.com/results?search_query=mark+bosch+guitarist"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <img alt="instagram-icon" src={instagram} />
             </a>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}

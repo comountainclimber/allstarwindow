@@ -1,42 +1,42 @@
-import React from "react";
-import ReactGridGallery from "react-grid-gallery";
-import YouTube from "react-youtube";
-import ReactPlayer from "react-player";
+import React from "react"
+import ReactGridGallery from "react-grid-gallery"
+import YouTube from "react-youtube"
+import ReactPlayer from "react-player"
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-import one from "../images/gallery/1.jpg";
-import two from "../images/gallery/2.jpg";
-import three from "../images/gallery/3.png";
-import four from "../images/gallery/4.jpg";
-import five from "../images/gallery/5.jpg";
-import six from "../images/gallery/6.jpg";
-import seven from "../images/gallery/7.jpg";
-import eight from "../images/gallery/8.jpg";
-import nine from "../images/gallery/9.jpg";
-import ten from "../images/gallery/10.jpg";
-import eleven from "../images/gallery/11.jpg";
-import twelve from "../images/gallery/12.jpg";
-import thirteen from "../images/gallery/13.jpg";
-import fourteen from "../images/gallery/14.jpg";
-import fifteen from "../images/gallery/15.jpg";
-import sixteen from "../images/gallery/16.jpg";
-import seventeen from "../images/gallery/17.jpg";
-import eighteen from "../images/gallery/18.jpg";
-import nineteen from "../images/gallery/19.jpg";
-import twenty from "../images/gallery/20.png";
-import twentyone from "../images/gallery/21.jpg";
-import twentytwo from "../images/gallery/22.jpg";
-import twentythree from "../images/gallery/23.jpg";
-import twentyfour from "../images/gallery/24.jpg";
-import twentyfive from "../images/gallery/25.png";
-import twentysix from "../images/gallery/26.jpeg";
-import twentyseven from "../images/gallery/27.jpeg";
-import twentyeight from "../images/gallery/28.jpeg";
-import twentynine from "../images/gallery/29.jpeg";
-import thirty from "../images/gallery/30.jpeg";
-import thirtyone from "../images/gallery/31.jpeg";
+import one from "../images/gallery/1.jpg"
+import two from "../images/gallery/2.jpg"
+import three from "../images/gallery/3.png"
+import four from "../images/gallery/4.jpg"
+import five from "../images/gallery/5.jpg"
+import six from "../images/gallery/6.jpg"
+import seven from "../images/gallery/7.jpg"
+import eight from "../images/gallery/8.jpg"
+import nine from "../images/gallery/9.jpg"
+import ten from "../images/gallery/10.jpg"
+import eleven from "../images/gallery/11.jpg"
+import twelve from "../images/gallery/12.jpg"
+import thirteen from "../images/gallery/13.jpg"
+import fourteen from "../images/gallery/14.jpg"
+import fifteen from "../images/gallery/15.jpg"
+import sixteen from "../images/gallery/16.jpg"
+import seventeen from "../images/gallery/17.jpg"
+import eighteen from "../images/gallery/18.jpg"
+import nineteen from "../images/gallery/19.jpg"
+import twenty from "../images/gallery/20.png"
+import twentyone from "../images/gallery/21.jpg"
+import twentytwo from "../images/gallery/22.jpg"
+import twentythree from "../images/gallery/23.jpg"
+import twentyfour from "../images/gallery/24.jpg"
+import twentyfive from "../images/gallery/25.png"
+import twentysix from "../images/gallery/26.jpeg"
+import twentyseven from "../images/gallery/27.jpeg"
+import twentyeight from "../images/gallery/28.jpeg"
+import twentynine from "../images/gallery/29.jpeg"
+import thirty from "../images/gallery/30.jpeg"
+import thirtyone from "../images/gallery/31.jpeg"
 
 const IMAGES = [
   {
@@ -209,17 +209,17 @@ const IMAGES = [
     thumbnailWidth: 220,
     thumbnailHeight: 180,
   },
-];
+]
 
 const Gallery = () => {
   return (
     <Layout>
       <SEO title="All Star Window Cleaning - Photos" />
       <div className="Gallery">
-        <ReactGridGallery enableImageSelection={false} images={IMAGES} />
+        {/* <ReactGridGallery enableImageSelection={false} images={IMAGES} /> */}
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Gallery;
+export default Gallery

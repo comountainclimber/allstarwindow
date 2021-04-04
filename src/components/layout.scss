@@ -13,6 +13,7 @@
 }
 
 .footer {
+  font-family: "Open Sans";
   flex-shrink: 0;
   border-top: thin solid #878a8e;
   padding: 24px 0;
@@ -26,7 +27,8 @@
     // font-size: 16px;
     // color: var(--light-grey);
 
-    font-family: OpenSans-LightItalic;
+    font-weight: lighter;
+    font-style: italic;
     font-size: 14px;
     color: #272343;
     letter-spacing: -0.04px;
@@ -40,7 +42,7 @@
       text-decoration: none;
 
       span {
-        font-family: OpenSans-Light;
+        font-weight: lighter;
         font-size: 18px;
         color: #272343;
         letter-spacing: -0.04px;
@@ -202,11 +204,13 @@
   padding: 12px 24px;
 
   border: 1px solid #1b262c;
-  font-family: OpenSans-SemiBold;
+  font-family: "Open Sans";
+  font-weight: bolder;
   font-size: 17px;
   color: #272343;
   letter-spacing: -0.04px;
   border-radius: 20px;
+  text-decoration: none;
 }
 
 /* normal button style */
@@ -220,6 +224,7 @@
   color: #272343;
   position: relative;
   border-radius: 20px;
+  text-decoration: none;
   // background-color: white;
 }
 /* button hover style if required */
@@ -265,31 +270,34 @@
 
 #main-image-container {
   width: 100%;
-  margin: 48px 0;
-
+  margin: 48px 0 0 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+
   div {
     max-width: 350px;
-    margin-left: 48px;
+    padding: 48px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: OpenSans-Light;
+    font-family: "Open Sans";
     font-size: 24px;
     color: #272343;
     letter-spacing: -0.02px;
-    font-family: OpenSans-Light;
+    font-family: "Open Sans";
     font-size: 24px;
     color: #272343;
     letter-spacing: -0.04px;
 
     small {
-      font-family: OpenSans-LightItalic;
+      margin-top: 12px;
+      font-family: "Open Sans";
+      font-weight: lighter;
       font-size: 14px;
       color: #272343;
       letter-spacing: -0.04px;
-      font-family: OpenSans-LightItalic;
+      font-family: "Open Sans";
       font-size: 14px;
       color: #272343;
       letter-spacing: -0.04px;
@@ -298,6 +306,17 @@
 
   img {
     max-width: 500px;
+    width: 100%;
+    flex: 1;
+    max-height: 500px;
+  }
+
+  @media only screen and (max-width: 875px) {
+    img {
+      max-width: 320px;
+
+      max-height: 320px;
+    }
   }
 }
 
@@ -313,6 +332,10 @@
     width: 100%;
     padding: 24px 0;
     flex-wrap: wrap;
+
+    iframe {
+      margin: 12px !important;
+    }
   }
 }
 
@@ -374,12 +397,20 @@
     -ms-animation: fadein 2s; /* Internet Explorer */
     -o-animation: fadein 2s; /* Opera < 12.1 */
     animation: fadein 2s;
+
+    @media only screen and (max-width: 875px) {
+      padding-top: 0px;
+    }
   }
 
   #jumbo-logo {
     width: 250px;
     height: 250px;
     margin-bottom: 24px;
+
+    @media only screen and (max-width: 875px) {
+      display: none;
+    }
   }
 
   #call-to-action {
@@ -388,32 +419,70 @@
     margin-right: 24px;
 
     span {
-      font-family: OpenSans-LightItalic;
+      font-family: "Open Sans";
+      font-weight: lighter;
+      font-style: italic;
       font-size: 22px;
       color: #272343;
     }
 
-    button {
+    a {
       margin-top: 12px;
     }
 
     h3 {
-      font-family: OpenSans-SemiBold;
+      font-family: "Open Sans";
       font-size: 26px;
       color: #272343;
       letter-spacing: -0.04px;
     }
 
     #services-list {
-      font-family: OpenSans-Regular;
+      font-family: "Open Sans";
       font-size: 22px;
       color: #272343;
       letter-spacing: -0.04px;
       text-align: left;
+      margin-bottom: 48px;
 
       div {
         margin: 12px 0;
+        display: flex;
+        align-items: center;
+
+        svg {
+          min-width: 19px;
+          margin-right: 10px;
+        }
       }
+    }
+
+    @media only screen and (max-width: 875px) {
+      padding: 24px;
+
+      h3 {
+        margin-top: 8px;
+        font-size: 22px;
+      }
+
+      span {
+        font-size: 16px;
+      }
+
+      #services-list {
+        font-size: 18px;
+      }
+    }
+  }
+
+  #mini-logo {
+    display: none;
+
+    @media only screen and (max-width: 875px) {
+      // display: flex;
+      // margin: auto;
+      // width: 100px;
+      // height: 100px;
     }
   }
 
@@ -777,7 +846,6 @@
   }
 
   .LandingPage {
-    height: 60vh;
     min-height: 0px;
     img {
       max-width: 345px;

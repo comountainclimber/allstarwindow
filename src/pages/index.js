@@ -1,5 +1,5 @@
 import React from "react"
-import { navigate } from "gatsby"
+import { navigate, Link } from "gatsby"
 
 import InstagramEmbed from "react-instagram-embed"
 
@@ -29,6 +29,8 @@ function LandingPage() {
                 cleaning and maintenance services
               </h3>
 
+              <Logo id="mini-logo" />
+
               <div id="services-list">
                 <div>
                   <Check /> Residential and commercial
@@ -41,7 +43,10 @@ function LandingPage() {
                   valley
                 </div>
               </div>
-              <button className="myButton">Get a quote today</button>
+
+              <Link to="/contact" className="myButton">
+                Get a quote today
+              </Link>
             </div>
 
             <Logo id="jumbo-logo" />
