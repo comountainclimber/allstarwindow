@@ -1,25 +1,25 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 
-import SEO from "../components/seo";
-import Layout from "../components/layout";
-import contact from "../images/contact.png";
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+import contact from "../images/contact.png"
 
 const config = {
   script:
     "https://script.google.com/macros/s/AKfycbwT3nWYek5iDGGU5hLrzzcriAyYENTYv11qSusp8raUQn2gr6Bf/exec",
   sheet: "responses",
   // email: '',
-};
+}
 
 const Thanks = () => (
   <div className="thankyou_message">
     <h2>Thanks for reaching out. I will get back to you soon!</h2>
   </div>
-);
+)
 
 export default class Contact extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       form: {
         name: "",
@@ -29,61 +29,61 @@ export default class Contact extends Component {
       },
       sent: false,
       clicked: false,
-    };
+    }
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick = () => {
-    const { form } = this.state;
+    const { form } = this.state
 
     // loading
-    this.setState({ clicked: true });
+    this.setState({ clicked: true })
 
     // sent
     const setSent = () => {
-      this.setState({ sent: true });
-    };
+      this.setState({ sent: true })
+    }
 
     // checking if bot
-    const { honeypot } = form;
+    const { honeypot } = form
     if (honeypot) {
-      return false;
+      return false
     }
 
     // sending through xhr as axios won't work (CORS)
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", config.script);
+    const xhr = new XMLHttpRequest()
+    xhr.open("POST", config.script)
     // xhr.withCredentials = true
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
     xhr.onreadystatechange = function xhrGo() {
-      setSent();
-    };
+      setSent()
+    }
     const encoded = Object.keys(form)
-      .map((k) => {
-        return `${encodeURIComponent(k)}=${encodeURIComponent(form[k])}`;
+      .map(k => {
+        return `${encodeURIComponent(k)}=${encodeURIComponent(form[k])}`
       })
-      .join("&");
+      .join("&")
 
     // finally sending
-    xhr.send(encoded);
-    return true;
-  };
+    xhr.send(encoded)
+    return true
+  }
 
   handleChange = ({ target }) => {
-    const { id, value } = target;
-    const { state } = this;
-    state.form[id] = value;
-    this.setState(state);
-  };
+    const { id, value } = target
+    const { state } = this
+    state.form[id] = value
+    this.setState(state)
+  }
 
   render() {
     const {
       form: { name, message, email, honeypot },
       sent,
       clicked,
-    } = this.state;
+    } = this.state
 
     return (
       <Layout>
@@ -131,7 +131,7 @@ export default class Contact extends Component {
                 // method="POST"
                 // action={config.script} // change this url
                 >
-                  <h1> Send me a message</h1>
+                  <h1> Reach out for a quote</h1>
                   <div>
                     <fieldset>
                       <label htmlFor="name">Name:</label>
@@ -169,6 +169,20 @@ export default class Contact extends Component {
                         value={email}
                       />
                     </fieldset>
+
+                    <fieldset>
+                      <label htmlFor="email">Your Phone Number:</label>
+                      <input
+                        onChange={this.handleChange}
+                        id="phone"
+                        key="phone"
+                        name="phone"
+                        type="phone"
+                        required
+                        placeholder="(555) 555-5555"
+                        value={email}
+                      />
+                    </fieldset>
                     <fieldset
                       className="honeypot-field"
                       style={{ display: "none" }}
@@ -191,7 +205,11 @@ export default class Contact extends Component {
                         Loading
                       </button>
                     ) : (
-                      <button type="button" onClick={() => this.handleClick()}>
+                      <button
+                        type="button"
+                        onClick={() => this.handleClick()}
+                        className="myButton"
+                      >
                         Send
                       </button>
                     )}
@@ -202,6 +220,6 @@ export default class Contact extends Component {
           </div>
         </div>
       </Layout>
-    );
+    )
   }
 }

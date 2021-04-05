@@ -23,10 +23,6 @@
   background-color: var(--light-grey);
 
   #left-footer-content {
-    // font-weight: 200;
-    // font-size: 16px;
-    // color: var(--light-grey);
-
     font-weight: lighter;
     font-style: italic;
     font-size: 14px;
@@ -100,6 +96,7 @@
   padding: 12px;
   border-bottom: thin solid #878a8e;
   background-color: var(--light-grey);
+  font-family: "Open Sans";
 
   img {
     max-width: 322px;
@@ -125,8 +122,9 @@
       margin: 0 24px 0 24px;
       text-align: center;
       width: 100px;
+      font-weight: 600;
 
-      font-family: OpenSans-SemiBold;
+      font-family: "Open Sans";
       font-size: 21px;
       color: #272343;
       letter-spacing: -0.04px;
@@ -270,7 +268,7 @@
 
 #main-image-container {
   width: 100%;
-  margin: 48px 0 0 0;
+  padding: 48px 48px 24px 48px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -378,6 +376,10 @@
   }
 }
 
+#mobile-menu-wrapper {
+  display: none;
+}
+
 .LandingPage {
   display: flex;
   width: 100%;
@@ -391,7 +393,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 48px 0;
+    padding: 24px 0 48px;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
     -ms-animation: fadein 2s; /* Internet Explorer */
@@ -432,7 +434,7 @@
 
     h3 {
       font-family: "Open Sans";
-      font-size: 26px;
+      font-size: 30px;
       color: #272343;
       letter-spacing: -0.04px;
     }
@@ -508,22 +510,32 @@
 //   display: flex;
 // }
 
-.About {
+.Services {
   display: flex;
   padding: 24px;
   max-width: 900px;
+  flex-wrap: wrap;
   margin: auto;
+  margin-bottom: 48px;
 
-  a {
-    color: var(--green);
+  #middle-section-content {
+    margin: 24px 0;
   }
+
+  // a {
+  //   color: var(--green);
+  // }
 
   img {
     float: left;
     max-width: 350px;
-    border: solid 12px var(--medium-grey);
+    border: solid 12px var(--light-grey);
     border-radius: 3px;
     margin: 0 48px 24px 0;
+  }
+
+  .image-float-right {
+    float: right;
   }
 
   h3 {
@@ -531,8 +543,37 @@
     font-size: 24px;
   }
 
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
   #mobile-about-image {
     display: none;
+  }
+
+  @media only screen and (max-width: 675px) {
+    padding: 16px;
+
+    .image-container,
+    .button-container {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+
+      img {
+        max-width: 300px;
+        margin: 0;
+        float: none;
+      }
+    }
+
+    .image-float-right {
+      float: none;
+    }
   }
 }
 
@@ -582,9 +623,11 @@
     text-align: center;
     display: flex;
     margin-top: 24px;
-    padding: 6px 24px;
-    border-radius: 3px;
-    background-color: var(--light-grey);
+    // width: 100px;
+    text-align: center;
+    // padding: 6px 24px;
+    // border-radius: 3px;
+    // background-color: var(--light-grey);
   }
 
   form {
@@ -630,9 +673,10 @@
   label {
     display: block;
     width: 100px;
-    color: var(--light-grey);
-    font-weight: 300;
+    color: var(--navy-blue);
+    font-weight: 400;
     width: 100%;
+    margin-bottom: 2px;
   }
 }
 
@@ -739,9 +783,9 @@
     margin: 0 0 0 12px;
   }
 
-  .About {
-    padding: 0 12px;
-  }
+  // .Services {
+  //   padding: 0 12px;
+  // }
 
   .contact-container {
     .contact-information-container {
@@ -750,6 +794,31 @@
         max-width: 300px;
       }
     }
+  }
+}
+
+.bm-burger-button {
+  display: none !important;
+}
+
+#mobile-menu-close-button {
+  background-color: var(--light-grey);
+  color: var(--dark-blue);
+
+  path {
+    fill: var(--dark-blue);
+  }
+}
+
+#mobile-links-container {
+  display: flex !important;
+  margin-top: 48px;
+  flex-direction: column;
+
+  a {
+    margin: 12px 0;
+    // font-size: 22px;
+    color: var(--dark-blue);
   }
 }
 
@@ -781,6 +850,42 @@
 
   .inner-links-container {
     display: none !important;
+  }
+
+  .bm-burger-button {
+    display: block !important;
+  }
+
+  // .bm-menu-wrap {
+  //   background-color: purple;
+  //   height: 2000px !important;
+  //   width: 90vw !important;
+  // }
+
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #bdc3c7;
+  }
+
+  #mobile-menu-wrapper {
+    display: block !important;
+    height: 100%;
+    width: 100%;
+
+    justify-content: flex-end;
+
+    svg {
+      cursor: pointer;
+      opacity: 0.8;
+      // max-width: 30px;
+      // margin-right: 12px;
+    }
   }
 
   .About {
