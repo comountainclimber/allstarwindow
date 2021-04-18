@@ -116,14 +116,11 @@
     display: flex;
 
     a {
-      // font-size: 24px;
-      // color: #ffffff;
       text-decoration: none;
       margin: 0 24px 0 24px;
       text-align: center;
       width: 100px;
       font-weight: 600;
-
       font-family: "Open Sans";
       font-size: 21px;
       color: #272343;
@@ -133,7 +130,6 @@
     a:hover {
       text-decoration: underline solid #272343;
       font-weight: 600;
-      // color: var(--green);
     }
 
     a:first-child {
@@ -160,8 +156,6 @@
   justify-content: center;
   flex: 0.5;
   padding: 0 24px;
-
-  // padding: 0 48px 0 0;
   p {
     margin-bottom: 6px;
     font-weight: 300;
@@ -192,9 +186,6 @@
       fill: #fff;
     }
   }
-
-  #call-to-action-link:hover {
-  }
 }
 
 .primary-button {
@@ -213,17 +204,14 @@
 
 /* normal button style */
 .myButton {
-  // width: 110px;
   padding: 12px 24px;
   border: 1px solid #1b262c;
-  // height: 30px;
   background-color: white;
   text-align: center;
   color: #272343;
   position: relative;
   border-radius: 20px;
   text-decoration: none;
-  // background-color: white;
 }
 /* button hover style if required */
 .myButton:hover {
@@ -384,9 +372,6 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  // height: 75vh;
-  // min-height: 600px;
-
   #call-to-action-container {
     background-color: var(--light-grey);
     display: flex;
@@ -479,23 +464,7 @@
 
   #mini-logo {
     display: none;
-
-    @media only screen and (max-width: 875px) {
-      // display: flex;
-      // margin: auto;
-      // width: 100px;
-      // height: 100px;
-    }
   }
-
-  // .jumbo-bosch {
-  //   margin: 12px 0;
-  //   padding: 12px 0;
-  //   background: rgba(0, 0, 0, 0) url("../images/jumbo.png") no-repeat scroll
-  //     center center / cover;
-  //   width: 500px;
-  //   box-shadow: 0 0 10px 10px var(--dark-grey) inset;
-  // }
 }
 
 #created-by-has {
@@ -503,12 +472,6 @@
   opacity: 0.2;
   font-size: 12px;
 }
-
-// .router-content {
-//   flex: 1;
-//   height: 100%;
-//   display: flex;
-// }
 
 .Services {
   display: flex;
@@ -521,10 +484,6 @@
   #middle-section-content {
     margin: 24px 0;
   }
-
-  // a {
-  //   color: var(--green);
-  // }
 
   img {
     float: left;
@@ -623,11 +582,7 @@
     text-align: center;
     display: flex;
     margin-top: 24px;
-    // width: 100px;
     text-align: center;
-    // padding: 6px 24px;
-    // border-radius: 3px;
-    // background-color: var(--light-grey);
   }
 
   form {
@@ -763,12 +718,8 @@
 }
 
 @media only screen and (max-width: 990px) {
-  // #navigation {
-  //   height: 110px;
-  // }
   #desktop-nav-links {
     padding: 12px 0;
-    // flex-direction: column;
   }
 
   #navigation .inner-links-container a:first-child {
@@ -782,10 +733,6 @@
   #navigation .inner-links-container a:last-child {
     margin: 0 0 0 12px;
   }
-
-  // .Services {
-  //   padding: 0 12px;
-  // }
 
   .contact-container {
     .contact-information-container {
@@ -817,7 +764,6 @@
 
   a {
     margin: 12px 0;
-    // font-size: 22px;
     color: var(--dark-blue);
   }
 }
@@ -833,20 +779,10 @@
         margin-top: 12px;
       }
     }
-
-    // #right-footer-content {
-    //   align-items: center;
-    //   display: flex;
-    // }
-
     img {
       width: 25px;
     }
   }
-
-  // .footer {
-  //   padding: 16px;
-  // }
 
   .inner-links-container {
     display: none !important;
@@ -855,12 +791,6 @@
   .bm-burger-button {
     display: block !important;
   }
-
-  // .bm-menu-wrap {
-  //   background-color: purple;
-  //   height: 2000px !important;
-  //   width: 90vw !important;
-  // }
 
   /* Position and sizing of clickable cross button */
   .bm-cross-button {
@@ -883,8 +813,6 @@
     svg {
       cursor: pointer;
       opacity: 0.8;
-      // max-width: 30px;
-      // margin-right: 12px;
     }
   }
 
@@ -905,7 +833,6 @@
       width: 350px;
       border-width: 12px;
       align-self: center;
-      // float: none;
     }
   }
 
@@ -954,25 +881,10 @@
     min-height: 0px;
     img {
       max-width: 345px;
-      // height: 100vh;
     }
   }
 
-  // .footer {
-  //   padding: 16px 16px 32px 16px;
-
-  //   #right-footer-content {
-  //     align-items: center;
-  //     display: flex;
-  //   }
-
-  //   img {
-  //     width: 25px;
-  //   }
-  // }
-
   #right-footer-content {
-    // align-items: center;
     display: flex;
 
     span {
@@ -992,7 +904,6 @@
     flex: 1;
     min-width: auto;
     padding: 12px;
-    // padding: 0 48px 0 0;
     p {
       font-size: 22px;
     }
