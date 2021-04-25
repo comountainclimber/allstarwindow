@@ -79,7 +79,7 @@ const IMAGES = [
   {
     src: ten,
     thumbnail: ten,
-    thumbnailWidth: 200,
+    thumbnailWidth: 150,
     thumbnailHeight: 180,
   },
   {
